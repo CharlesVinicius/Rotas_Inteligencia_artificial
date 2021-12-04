@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    
+    <title>Document</title>
+</head>
+
+    <style>
+        h1{
+        
+        color: aliceblue;
+        font-family: Arial, Helvetica, sans-serif;
+        margin-top: 50px;
+        margin-left: 30px;
+    }
+    
+    
+    label{
+       color: white;
+       
+    }
+    
+    input{
+       margin-bottom: 10px;
+       outline: none;
+       padding: 7px;
+       width: 250px;
+       outline: none;
+       border: 1px solid rgba(0, 0, 0, 0.158);
+       border-radius: 3px;
+    }
+    
+    input:focus{
+       background-color: rgb(235, 241, 234);
+    }
+    
+    button{
+       border: none;
+       padding: 10px;
+       color: white;
+       background-color: rgb(88, 179, 66);
+       cursor: pointer;
+    }
+    
+    .center{
+       margin-left: 30px;
+    }
+    
+    
+    
+    body{
+       background-color: cornflowerblue;
+    }
+    
+    #opcao{
+        
+        margin-bottom: 10px;
+        outline: none;
+        padding: 7px;
+        width: 265px;
+        outline: none;
+        border: 1px solid rgba(0, 0, 0, 0.158);
+        border-radius: 3px;
+    }
+    p{
+        margin-left: 30px;
+        margin-top: 35px;
+    }
+    </style>
+ 
+<body>
+        <h1>Rotas de bairros para viaturas</h1>
+
+    <div class="center">
+        <form action="{{ url_for('index')}}" method="POST">
+            <label for="">Escolha uma origem</label><br><br>
+            <select name="origem" id="opcao">
+                <option value="esolher origem" disabled="true">Escolha uma origem</option>
+                <option value="Vila Romana">Vila Romana</option>
+                <option value="Vila Batista">Vila Batista</option>
+                <option value="Vila Maria">Vila Maria</option>
+                <option value="Vila Paulo Romeu">Vila Paulo Romeu</option>
+                <option value="Vila Canevari">Vila Canevari</option>
+                <option value="Centro">Centro</option>
+                <option value="Itagaçaba">Itagaçaba</option>
+                <option value="Jardim America">Jardim America</option>
+                <option value="Jardim Europa">Jardim Europa</option>
+                <option value="Vila Ana Rosa">Vila Ana Rosa</option>
+                <option value="Regina Celia">Regina Celia</option>
+                <option value="KM4">KM4</option>
+                <option value="Vila Biondi">Vila Biondi</option>
+                <option value="Comerciarios">Comerciarios</option>
+                <option value="Vila Juvenal">Vila Juvenal</option>
+                <option value="Parque Primavera">Parque Primavera</option>
+                <option value="Cecap">Cecap</option>
+                <option value="Vila Brasil">Vila Brasil</option>
+            </select>
+                <!--<input type="text" name="origem"><br><br>-->
+            <br><br><label for="">Escolha um destino</label>
+            <br><br><select name="destino" id="opcao">
+                <option value="escolher destino" disabled="true">Escolha um destino</option>
+                <option value="Vila Romana">Vila Romana</option>
+                <option value="Vila Batista">Vila Batista</option>
+                <option value="Vila Maria">Vila Maria</option>
+                <option value="Vila Paulo Romeu">Vila Paulo Romeu</option>
+                <option value="Vila Canevari">Vila Canevari</option>
+                <option value="Centro">Centro</option>
+                <option value="Itagaçaba">Itagaçaba</option>
+                <option value="Jardim America">Jardim America</option>
+                <option value="Jardim Europa">Jardim Europa</option>
+                <option value="Vila Ana Rosa">Vila Ana Rosa</option>
+                <option value="Regina Celia">Regina Celia</option>
+                <option value="KM4">KM4</option>
+                <option value="Vila Biondi">Vila Biondi</option>
+                <option value="Comerciarios">Comerciarios</option>
+                <option value="Vila Juvenal">Vila Juvenal</option>
+                <option value="Parque Primavera">Parque Primavera</option>
+                <option value="Cecap">Cecap</option>
+                <option value="Vila Brasil">Vila Brasil</option>
+            </select>
+                <!--<input type="text" name="destino"><br><br>-->
+                <!--<label>Digite um método abaixo: amplitude, profundidade, aprofundameto iterativo, profundidade limitada ou bidirecional</label><br><br>
+                <input type="text" name="metodo"><br>-->
+            <br><br><label for="">Escolha um método:</label>
+            <br><br><select name="metodo" id="opcao">
+                <option value="amplitude">amplitude</option>
+                <option value="profundidade">profundidade</option>
+                <option value="aprofundameto iterativo">aprofundameto iterativo</option>
+                <option value="profundidade limitada">profundidade limitada</option>
+                <option value="bidirecional">bidirecional</option>
+                <option value="custo uniforme">custo uniforme</option>
+                <option value="greedy">greedy</option>
+                <option value="estrela">estrela</option>
+            </select>
+                <br><br><button>Executar rota</button>
+        </form>
+    </div>
+
+    <br>
+    <p>{{caminho1}}</p>
+    <p>{{caminho2}}</p>
+    <p>{{caminho3}}</p>
+    <p>{{caminho6}}</p>
+    <p>{{caminho7}}</p>
+    <p>{{custo}}</p>
+    <p>{{greedy}}</p>
+    <p>{{estrela}}</p>
+        
+    
+</body>
+</html>
